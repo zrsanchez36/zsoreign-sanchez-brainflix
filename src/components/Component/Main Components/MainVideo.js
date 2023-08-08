@@ -39,47 +39,99 @@ import React, { useState, useEffect, Component } from 'react';
 
 
 
-const mainVideoDetails = [];
+// const mainVideoDetails = [];
+// mainVideoDetails.push(VideoDetails);
+// console.log(mainVideoDetails);
 
-const MainVideo = ({ mainVideo, comments, props }) => {
-    const [videoData, setVideoData] = useState(mainVideo);
-    
-        return (
 
-            <section className='main__video'>
-                {
-                    VideoDetails && VideoDetails.map( details => {
-                        const image = details.image;
-                        const video = details.video;
-                        const id = details.id;
-                        const title = details.title;
-                        const description = details.description;
-                        const channel = details.channel;
-                        const views = details.views;
-                        const likes = details.likes;
+// const MainVideo = ({ mainVideo, comments, props, n }) => {
+//     // const [primaryVideo, setVideo, idleVideo] = useState(mainVideoDetails[0]);
+//         return (
+
+//             <section className='main__video'>
+//                 {
+//                     VideoDetails && VideoDetails.map( details => {
+//                         const image = details.image;
+//                         const video = details.video;
+//                         const id = details.id;
+//                         const title = details.title;
+//                         const description = details.description;
+//                         const channel = details.channel;
+//                         const views = details.views;
+//                         const likes = details.likes;
                         
 
-                        return(
+//                         return(
                             
-                            <div className='main__video--container' key={ id }>
-                               <div className="main__video">
-                                <video controls poster={image}>
-                                <source src={video}></source>
-                                </video>
+//                             <div className='main__video--container' key={ id }>
+//                                <div className="main__video">
+//                                 <video controls poster={image}>
+//                                 <source src={video}></source>
+//                                 </video>
 
-                                    <h1>{title}</h1>
-                                    <p>07/11/2021</p>
-                                    <img src={ViewsIcon}></img><p>{views} views</p>
-                                    <img src={LikesIcon}></img><p>{likes}</p>
-      {/* Render other details like description, likes, duration, etc. */}
-                                </div>     
-                            </div>
-                        )
-                    })
-                }
-            </section> 
-    );
-  };
+//                                     <h1>{title}</h1>
+//                                     <p>07/11/2021</p>
+//                                     <img src={ViewsIcon}></img><p>{views} views</p>
+//                                     <img src={LikesIcon}></img><p>{likes}</p>
+//       {/* Render other details like description, likes, duration, etc. */}
+//                                 </div>     
+//                             </div>
+//                         )
+//                     })
+//                 }
+//             </section> 
+//     );
+//   };
   
-  export default MainVideo;
+//   export default MainVideo;
 
+
+const MainVideo = ({ mainVideo, comments }) => {
+  return (
+    <div className="main-video">
+      <div className="video-container">
+        <video controls poster={mainVideo.image}>
+          <source src={mainVideo.video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div className="video-details">
+        <h1>{mainVideo.title}</h1>
+        <div className="video-stats">
+          <span>{mainVideo.views} Views</span>
+          <span>&bull;</span>
+          <span>{mainVideo.likes} Likes</span>
+        </div>
+        <div className="channel-details">
+          <div className="channel-avatar">
+            <img src="/assets/images/avatar.jpg" alt="Channel Avatar" />
+          </div>
+          <div className="channel-info">
+            <h4>{mainVideo.channel}</h4>
+            <span>{mainVideo.timestamp}</span>
+          </div>
+        </div>
+        <p>{mainVideo.description}</p>
+      </div>
+      {/* Render comments */}
+      <div className="comments-section">
+        <h3>{comments.length} Comments</h3>
+        {/* Loop through comments */}
+        {comments.map(comment => (
+          <div className="comment" key={comment.id}>
+            <div className="comment-avatar">
+              <img src="/assets/images/avatar.jpg" alt="Commenter Avatar" />
+            </div>
+            <div className="comment-details">
+              <h4>{comment.name}</h4>
+              <span>{comment.timestamp}</span>
+              <p>{comment.comment}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default MainVideo;

@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import VideoDetails from '../../../Data/video-details.json';
-import VideoListData from '../../../Data/videos.json';
-
+import React from 'react';
 
 const SideVideo = ({ video, onClick }) => {
   return (

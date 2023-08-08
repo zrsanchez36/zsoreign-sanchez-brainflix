@@ -12,8 +12,8 @@ export default function Main() {
 
     return (
       <section className='main'>
-        <MainVideo />
-        <VideoList />
+        {/* <MainVideo />
+        <VideoList /> */}
       </section>
     );
   }
