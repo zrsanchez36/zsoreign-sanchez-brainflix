@@ -88,25 +88,25 @@ import React, { useState, useEffect, Component } from 'react';
 
 const MainVideo = ({ mainVideo, comments }) => {
   return (
-    <div className="main-video">
-      <div className="video-container">
+    <div className="main__video">
+      <div className="video__container">
         <video controls poster={mainVideo.image}>
           <source src={mainVideo.video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="video-details">
+      <div className="video__details">
         <h1>{mainVideo.title}</h1>
-        <div className="video-stats">
+        <div className="video__stats">
           <span>{mainVideo.views} Views</span>
           <span>&bull;</span>
           <span>{mainVideo.likes} Likes</span>
         </div>
-        <div className="channel-details">
-          <div className="channel-avatar">
+        <div className="channel__details">
+          <div className="channel__avatar">
             <img src="/assets/images/avatar.jpg" alt="Channel Avatar" />
           </div>
-          <div className="channel-info">
+          <div className="channel__info">
             <h4>{mainVideo.channel}</h4>
             <span>{mainVideo.timestamp}</span>
           </div>
@@ -114,15 +114,15 @@ const MainVideo = ({ mainVideo, comments }) => {
         <p>{mainVideo.description}</p>
       </div>
       {/* Render comments */}
-      <div className="comments-section">
+      <div className="comments__section">
         <h3>{comments.length} Comments</h3>
         {/* Loop through comments */}
         {comments.map(comment => (
           <div className="comment" key={comment.id}>
-            <div className="comment-avatar">
+            <div className="comment__avatar">
               <img src="/assets/images/avatar.jpg" alt="Commenter Avatar" />
             </div>
-            <div className="comment-details">
+            <div className="comment__details">
               <h4>{comment.name}</h4>
               <span>{comment.timestamp}</span>
               <p>{comment.comment}</p>
