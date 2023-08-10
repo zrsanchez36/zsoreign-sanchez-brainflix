@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import logo from '../../3.0 - Assets/Logo/BrainFlix-logo.svg';
+import logo from '../../assets/Logo/BrainFlix-logo.svg';
 import UploadButton from './Button';
 import SiteLogo from './Logo';
 import SearchBar from './DefaultSearchBar';

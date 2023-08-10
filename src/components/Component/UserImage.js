@@ -1,5 +1,5 @@
 import React from "react";
-import userImg from '../../3.0 - Assets/Images/Mohan-muruge.jpg';
+import userImg from '../../assets/Images/Mohan-muruge.jpg';
 
 function UserImage(props) {
     const className = props.className;

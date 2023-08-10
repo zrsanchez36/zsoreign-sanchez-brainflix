@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from '../../3.0 - Assets/Logo/BrainFlix-logo.svg';
+import logo from '../../assets/Logo/BrainFlix-logo.svg';
 
 function SiteLogo(props) {
     const className = props.className;
