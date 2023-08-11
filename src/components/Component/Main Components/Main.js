@@ -39,7 +39,7 @@ function Main() {
 
 export default Main;
 
-
+// Maybe try array.filter or array.find
 
 
 
