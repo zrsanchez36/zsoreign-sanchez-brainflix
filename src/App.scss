@@ -1,6 +1,7 @@
 @use './styles/mixins/font-face';
 // @include fontFace('avenir_next_lt_probold', 'src/assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff');
 
+@use './styles/mixins/breakpoints';
 
 @font-face {
     font-family: 'avenir_next_lt_probold';
