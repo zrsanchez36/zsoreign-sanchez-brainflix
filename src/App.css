@@ -25,4 +25,94 @@ body {
   margin: 0px;
   padding: 0;
   border: none;
+}
+
+.site__header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (min-width: 0) {
+  .site__header {
+    flex-direction: row;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 0) {
+  .header__logo--container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 767px) {
+  .header__logo--container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.header__logo {
+  height: 25px;
+  max-width: 120px;
+}
+@media (min-width: 0) {
+  .header__logo {
+    order: 1;
+  }
+}
+@media (min-width: 767px) {
+  .header__logo {
+    order: 1;
+  }
+}
+
+@media (min-width: 0) {
+  .header__search {
+    order: 2;
+  }
+}
+@media (min-width: 767px) {
+  .header__search {
+    order: 2;
+  }
+}
+
+.header__userimage {
+  border-radius: 50%;
+}
+@media (min-width: 0) {
+  .header__userimage {
+    order: 3;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+@media (min-width: 767px) {
+  .header__userimage {
+    order: 3;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+.header__button {
+  background-color: #0095ff;
+  height: 40px;
+  min-width: 150px;
+}
+@media (min-width: 0) {
+  .header__button {
+    width: 100%;
+  }
+}
+@media (min-width: 767px) {
+  .header__button {
+    width: 100%;
+  }
 }/*# sourceMappingURL=App.css.map */

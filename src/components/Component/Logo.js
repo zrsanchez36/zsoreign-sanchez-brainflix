@@ -5,7 +5,9 @@ function SiteLogo(props) {
     const className = props.className;
     const alt = props.alt
         return(
-            <img src= {logo} className={className} alt={alt}></img>
+            <div className="header__logo--container">
+                <img src= {logo} className={className} alt={alt}></img>
+            </div>
         );
 }
 

@@ -1,7 +1,9 @@
-@use './styles/mixins/font-face';
+
+@use './styles/partials/siteColors' as *;
+@use './styles/mixins/font-face' as *;
 // @include fontFace('avenir_next_lt_probold', 'src/assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff');
 
-@use './styles/mixins/breakpoints';
+@use './styles/mixins/breakpoints' as *;
 
 @font-face {
     font-family: 'avenir_next_lt_probold';
@@ -44,3 +46,79 @@ body {
 }
 
 
+.site__header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    @include xs {
+        flex-direction: row;
+        padding: 1rem;
+    }
+}
+
+.header__logo--container {
+    @include xs {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include sm {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.header__logo {
+    height: 25px;
+    max-width: 120px;
+    @include xs {
+        order: 1;
+    }
+    @include sm {
+        order: 1;
+    }
+}
+
+.header__search {
+    @include xs  {
+        order: 2;
+    }
+    @include sm  {
+        order: 2;
+    }
+}
+
+.header__userimage {
+    border-radius: 50%;
+    @include xs {
+        order: 3;
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    @include sm {
+        order: 3;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    
+
+}
+
+.header__button {
+    background-color: map-get($colors, BrainFlix_Blue ); 
+    height: 40px;
+    min-width: 150px;
+
+    @include xs {
+        width: 100%;
+    }
+
+    @include sm {
+        width: 100%;
+    }
+}
