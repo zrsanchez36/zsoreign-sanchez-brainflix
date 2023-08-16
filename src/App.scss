@@ -372,3 +372,67 @@ body {
         margin: 0;
     }
 }
+
+.comments__section {
+    @include xs {
+        padding: 1rem;
+    }
+
+    @include sm {
+        padding: 1rem;
+    }
+}
+
+.comment__avatar {
+    @include xs {
+        border-radius: 50%;
+        height: 2.25rem;
+        width: 2.25rem;
+        background-color: map-get($colors , Brain_Flix_Mercury );
+    }
+
+    @include sm {
+        border-radius: 50%;
+        height: 2.25rem;
+        width: 2.25rem;
+        background-color: map-get($colors , Brain_Flix_Mercury );
+    }
+}
+
+.add__comment {
+    @include xs {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+    }
+
+    @include sm {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+    }
+}
+
+
+.comment__textbox {
+        width: 100%;
+        box-sizing: border-box;
+        background-color:  map-get($colors , bg__alt--col);
+
+        &:active, &:focus { // I think you said you wanted focus as well
+            border: 1px solid map-get($colors , BrainFlix_Blue );
+            outline: none; // add this
+            background-color: #ffffff;
+          }
+
+          &:invalid {
+            border: 1px solid red;
+          }
+
+}
