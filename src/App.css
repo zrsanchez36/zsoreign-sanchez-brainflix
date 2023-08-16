@@ -373,4 +373,66 @@ body {
     display: inline-block;
     margin: 0;
   }
+}
+
+@media (min-width: 0) {
+  .comments__section {
+    padding: 1rem;
+  }
+}
+@media (min-width: 767px) {
+  .comments__section {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 0) {
+  .comment__avatar {
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+    background-color: #E1E1E1;
+  }
+}
+@media (min-width: 767px) {
+  .comment__avatar {
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+    background-color: #E1E1E1;
+  }
+}
+
+@media (min-width: 0) {
+  .add__comment {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #E1E1E1;
+  }
+}
+@media (min-width: 767px) {
+  .add__comment {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #E1E1E1;
+  }
+}
+
+.comment__textbox {
+  width: 100%;
+  box-sizing: border-box;
+}
+.comment__textbox:active, .comment__textbox:focus {
+  border: 1px solid #0095ff;
+  outline: none;
+  background-color: #ffffff;
+}
+.comment__textbox:invalid {
+  border: 1px solid red;
 }/*# sourceMappingURL=App.css.map */

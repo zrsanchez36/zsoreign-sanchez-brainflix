@@ -119,6 +119,17 @@ const MainVideo = ({ mainVideo, comments }) => {
       {/* Render comments */}
       <div className="comments__section">
         <h3>{comments.length} Comments</h3>
+        <div class="add__comment">
+          <div className="comment__avatar">
+          </div>
+          <div class="form__container">
+            <form>
+              <p>JOIN THE CONVERSATION</p>
+              <textarea id="commentBox" class="comment__textbox" rows="10" placeholder="Add a new comment" required></textarea>
+                <input id="submit__button" type="submit" value="COMMENT" class="comment__button"></input>
+            </form>
+          </div>
+        </div>
         {/* Loop through comments */}
         {comments.map(comment => (
           <div className="comment" key={comment.id}>
