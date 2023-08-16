@@ -47,13 +47,28 @@ body {
 
 
 .site__header {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
     @include xs {
-        flex-direction: row;
         padding: 1rem;
     }
+
+    @include sm {
+        padding: 1rem;
+    }
+}
+
+.site__navigation{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include xs {
+        justify-content: center;
+    }
+
+    @include sm {
+        justify-content: center;
+    }
+    
 }
 
 .header__logo--container {
@@ -109,10 +124,26 @@ body {
 
 }
 
+.header__button--container {
+    @include xs {
+        order: 4;
+        width: 100%;
+    }
+
+    @include sm {
+        width: 100%;
+        order: 4;
+    }
+} 
+
 .header__button {
     background-color: map-get($colors, BrainFlix_Blue ); 
     height: 40px;
     min-width: 150px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-weight: 700;
 
     @include xs {
         width: 100%;
@@ -120,5 +151,224 @@ body {
 
     @include sm {
         width: 100%;
+    }
+}
+
+.header__search {
+    min-width: 240px;
+    border-radius: 4px;
+    border: 1px solid map-get($colors , Brain_Flix_Mercury );
+    
+    &:active {
+        border: 2px solid map-get($colors , BrainFlix_Blue);
+
+    }
+
+    @include xs {
+        min-height: 36px;
+        margin: 0.75rem;
+        
+    }
+
+    @include sm {
+        min-height: 36px;
+    }
+}
+
+.search__icon {
+    @include xs {
+        place-items: center;
+    }
+
+    @include sm {
+
+    }
+}
+
+
+
+
+
+// Main video section
+
+.main__video {
+    @include xs {
+        width: 100%;
+    }
+
+    @include sm {
+        width: 100%;
+    }
+}
+
+.video__details {
+    @include xs {
+        padding: 1rem;
+    }
+
+    @include sm {
+        padding: 1rem;
+    }
+}
+
+.video__container {
+    @include xs {
+        width: 100%;
+    }
+
+    @include sm {
+        width: 100%;
+    }
+}
+
+.video__poster {
+    @include xs {
+        position: relative;
+        top: 0;
+        left: 0;
+        width:100%;
+    }
+
+    @include sm {
+        position: relative;
+        top: 0;
+        left: 0;
+        width:100%;
+    }
+}
+
+.video__info {
+    display: flex;
+    @include xs {
+        border-top: 1px solid map-get($colors , Brain_Flix_Mercury );
+        border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    @include sm {
+        border-top: 1px solid map-get($colors , Brain_Flix_Mercury );
+        border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content:flex-start;
+        padding: 1rem;
+    }
+}
+
+.channel__details {
+    @include xs {
+        display: flex;
+    }
+
+    @include sm {
+        display: flex;
+    }
+}
+
+.channel__details h4 {
+    @include xs {
+        margin: 0;
+    }
+
+    @include sm {
+        margin: 0;
+    }
+}
+
+.channel__info {
+    @include xs {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        order: 1;
+        width: 100%;
+    }
+
+    @include sm {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        order: 1;
+        width: 100%;
+    }
+}
+
+.channel__info p {
+    @include xs {
+        margin: 0;
+        padding-bottom: 1rem;
+        height: max-content;
+    }
+
+    @include sm {
+        margin: 0;
+    }
+}
+
+.channel__info h4 {
+
+    @include xs {
+        padding-bottom: 1rem;
+    }
+
+    @include sm {
+        padding-bottom: 1rem;
+    }
+}
+
+.video__stats {
+    @include xs {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        order: 2;
+        margin-left: 3rem;
+    }
+
+    @include sm {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        order: 2
+    }
+}
+
+.video__stat--container {
+    @include xs {
+       display: inline-block;
+       width: 100%;
+       padding-bottom: 1rem;
+    }
+    
+    @include sm {
+        width: max-content;
+        width: 100%;
+    }
+}
+
+.views__icon, .likes__icon {
+    @include xs {
+        display: inline-block;
+        padding-right: 1rem;
+    }
+
+    @include sm {
+        display: inline-block;
+        padding-right: 1rem;
+    }
+}
+
+.video__stat--container p {
+    margin: 0;
+    @include xs {
+        display: inline-block;
+        margin: 0;
+    }
+
+    @include sm {
+        display: inline-block;
+        margin: 0;
     }
 }

@@ -10,11 +10,13 @@ import UserImage from './UserImage';
 export default function Header() {
         return (
             <header className='site__header'>
+                <nav className='site__navigation'>
                 {/* <img src= {logo} className='header__logo' alt='BrainFlix Logo'></img> */}
-                <SiteLogo className = 'header__logo' alt='Brainflix Logo' />
-                <SearchBar className = 'header__search' type = 'text' placeholder = 'Search' />
-                <UserImage className = 'header__userimage' alt = 'user' />
-                <UploadButton className = 'header__button' label='UPLOAD'  />
+                    <SiteLogo className = 'header__logo' alt='Brainflix Logo' />
+                    <SearchBar className = 'header__search' type = 'text' placeholder = 'Search' />
+                    <UserImage className = 'header__userimage' alt = 'user' />
+                    <UploadButton className = 'header__button' label='UPLOAD'  />
+                </nav>
             </header>
         );
 

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {ReactComponent as SearchIcon} from '../../assets/Icons/search.svg';
 
 function SearchBar(props) {
     const className = props.className;
@@ -9,7 +9,7 @@ function SearchBar(props) {
             <div className='Search'>
                 <div className='search__imputs'>
                     <input className = {className} type = {type} placeholder={placeholder}></input>
-                    <div className='search__icon'></div>
+                    <div className='search__icon'><SearchIcon /></div>
                 </div>
                 {/* <div className='data__results'></div> */}
             </div>

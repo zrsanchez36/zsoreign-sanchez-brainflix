@@ -3,6 +3,7 @@ import LikesIcon from '../../../assets/Icons/likes.svg';
 //import VideoDetails from '../../../data/video-details.json';
 import React, { useState, useEffect, Component } from 'react';
 
+
 // function MainVideo(props) {
 //     const attribute = props.attribute;
 //     const className = props.className;
@@ -90,27 +91,29 @@ const MainVideo = ({ mainVideo, comments }) => {
   return (
     <div className="main__video">
       <div className="video__container">
-        <video controls poster={mainVideo.image}>
-          <source src={mainVideo.video} type="video/mp4" />
+        <video controls poster={mainVideo.image} className='video__poster'>
+          <source src={mainVideo.video} type="video/mp4" className='main__video' />
           Your browser does not support the video tag.
         </video>
       </div>
       <div className="video__details">
         <h1>{mainVideo.title}</h1>
+      <div className='video__info'>
         <div className="video__stats">
-          <span>{mainVideo.views} Views</span>
-          <span>&bull;</span>
-          <span>{mainVideo.likes} Likes</span>
+          <div className='video__stat--container'><img src= {ViewsIcon} className='views__icon' /><p>{mainVideo.views} </p></div>
+          {/* <span>&bull;</span> */}
+          <div className='video__stat--container'><img src= {LikesIcon} className='likes__icon' /><p>{mainVideo.likes} </p></div>
         </div>
         <div className="channel__details">
-          <div className="channel__avatar">
+          {/* <div className="channel__avatar">
             <img src="/assets/images/avatar.jpg" alt="Channel Avatar" />
-          </div>
+          </div> */}
           <div className="channel__info">
-            <h4>{mainVideo.channel}</h4>
-            <span>{mainVideo.timestamp}</span>
+            <h4>By {mainVideo.channel}</h4>
+            <p>{mainVideo.timestamp}</p>
           </div>
         </div>
+        </  div>
         <p>{mainVideo.description}</p>
       </div>
       {/* Render comments */}
