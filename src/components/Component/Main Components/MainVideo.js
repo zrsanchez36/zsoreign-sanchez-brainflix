@@ -1,6 +1,6 @@
 import ViewsIcon from '../../../3.0 - Assets/Icons/views.svg';
 import LikesIcon from '../../../3.0 - Assets/Icons/likes.svg';
-import VideoDetails from '../../../Data/video-details.json';
+import VideoDetails from '../../../data/video-details.json';
 import React, { useState, useEffect, Component } from 'react';
 
 // function MainVideo(props) {
