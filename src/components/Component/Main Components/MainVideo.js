@@ -2,6 +2,7 @@ import ViewsIcon from '../../../assets/Icons/views.svg';
 import LikesIcon from '../../../assets/Icons/likes.svg';
 //import VideoDetails from '../../../data/video-details.json';
 import React, { useState, useEffect, Component } from 'react';
+import UserIcon1 from '../../../assets/Images/Mohan-muruge.jpg'
 
 
 // function MainVideo(props) {
@@ -120,11 +121,12 @@ const MainVideo = ({ mainVideo, comments }) => {
       <div className="comments__section">
         <h3>{comments.length} Comments</h3>
         <div class="add__comment">
-          <div className="comment__avatar">
+          <div className="comment__avatar--container">
+            <img src= {UserIcon1} className='comment__avatar'></img>
           </div>
           <div class="form__container">
             <form>
-              <p>JOIN THE CONVERSATION</p>
+              <h3>JOIN THE CONVERSATION</h3>
               <textarea id="commentBox" class="comment__textbox" rows="10" placeholder="Add a new comment" required></textarea>
                 <input id="submit__button" type="submit" value="COMMENT" class="comment__button"></input>
             </form>
@@ -133,13 +135,12 @@ const MainVideo = ({ mainVideo, comments }) => {
         {/* Loop through comments */}
         {comments.map(comment => (
           <div className="comment" key={comment.id}>
-            <div className="comment__avatar">
-              <img src="/assets/images/avatar.jpg" alt="Commenter Avatar" />
+            <div className="comment__avatar--blank">
             </div>
             <div className="comment__details">
-              <h4>{comment.name}</h4>
-              <span>{comment.timestamp}</span>
-              <p>{comment.comment}</p>
+              <h4 className='user__name'>{comment.name}</h4>
+              <p className='time__stamp'>{comment.timestamp}</p>
+              <p className='comment__text'>{comment.comment}</p>
             </div>
           </div>
         ))}

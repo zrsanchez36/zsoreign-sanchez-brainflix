@@ -375,11 +375,17 @@ body {
 
 .comments__section {
     @include xs {
-        padding: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        height: auto;
     }
 
     @include sm {
-        padding: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        height: auto;
     }
 }
 
@@ -388,7 +394,34 @@ body {
         border-radius: 50%;
         height: 2.25rem;
         width: 2.25rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+
+    @include sm {
+        border-radius: 50%;
+        height: 2.25rem;
+        width: 2.25rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+// .comment__avatar--container {
+//     @include xs {
+
+//     }
+// }
+
+.comment__avatar--blank{
+    @include xs {
+        border-radius: 50%;
+        height: 2.25rem;
+        width: 2.25rem;
         background-color: map-get($colors , Brain_Flix_Mercury );
+        margin-right: 1rem;
+        order: 1;
+        
     }
 
     @include sm {
@@ -404,9 +437,8 @@ body {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        width: 100%;
-        position: relative;
         border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+        float: right;
     }
 
     @include sm {
@@ -414,8 +446,29 @@ body {
         flex-wrap: wrap;
         flex-direction: row;
         width: 100%;
-        position: relative;
         border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+    }
+}
+
+.form__container {
+    @include xs {
+        width: 80%;
+        float: right;
+    }
+
+    @include sm {
+        width: 80%;
+        float: right;
+    }
+
+}
+
+.form__container h3 {
+    margin: 0;
+    margin-bottom: 4px;
+    color: silver;
+    @include xs {
+        color: silver;
     }
 }
 
@@ -424,15 +477,80 @@ body {
         width: 100%;
         box-sizing: border-box;
         background-color:  map-get($colors , bg__alt--col);
+        border: 1px solid map-get($colors , Brain_Flix_Mercury );
+        border-radius: 4px;
 
-        &:active, &:focus { // I think you said you wanted focus as well
-            border: 1px solid map-get($colors , BrainFlix_Blue );
+
+        &:active, &:focus {
+            border: 2px solid map-get($colors , BrainFlix_Blue );
             outline: none; // add this
             background-color: #ffffff;
           }
 
-          &:invalid {
-            border: 1px solid red;
-          }
+        //   &:invalid {
+        //     border: 1px solid red;
+        //   }
 
+        @include xs {
+            height: 108px;
+            padding: 12px;
+            width: 100%;
+        }
+
+        @include sm {
+            height: 108px;
+            padding: 12px;
+            width: 100%;
+        }
+}
+
+.comment__button {
+    background-color: map-get($colors, BrainFlix_Blue ); 
+    height: 40px;
+    min-width: 150px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.comment {
+    display: flex;
+    @include xs {
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+.user__name {
+    @include xs {
+        margin: 0;
+        margin-bottom: 1rem;
+        order: 2;
+    }
+
+    @include sm {
+        margin: 0;
+        margin-bottom: 1rem;
+        order: 2;
+    }
+}
+
+
+.time__stamp {
+    color: silver;
+    @include xs {
+        flex: 2 1 auto;
+        justify-self: right;
+        text-align: right;
+        float: right;
+        // width: 2rem;
+        // height: 2rem;
+        order: 3;
+    }
 }
