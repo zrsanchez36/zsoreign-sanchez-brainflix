@@ -243,18 +243,23 @@ body {
     @include xs {
         border-top: 1px solid map-get($colors , Brain_Flix_Mercury );
         border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+        stroke-width: 1px;
         flex-wrap: wrap;
         flex-direction: row;
         padding: 1rem;
     }
 
     @include sm {
-        border-top: 1px solid map-get($colors , Brain_Flix_Mercury );
-        border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+        stroke-width: 1px;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content:flex-start;
         padding: 1rem;
+    }
+
+    @include md {
+        border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+        stroke-width: 1px;
     }
 }
 
