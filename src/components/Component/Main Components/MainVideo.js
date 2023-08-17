@@ -137,11 +137,11 @@ const MainVideo = ({ mainVideo, comments }) => {
           <div className="comment" key={comment.id}>
             <div className="comment__avatar--blank">
             </div>
-            <div className="comment__details">
+            {/* <div className="comment__details"> */}
               <h4 className='user__name'>{comment.name}</h4>
               <p className='time__stamp'>{comment.timestamp}</p>
               <p className='comment__text'>{comment.comment}</p>
-            </div>
+            {/* </div> */}
           </div>
         ))}
       </div>
