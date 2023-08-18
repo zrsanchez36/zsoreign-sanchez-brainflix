@@ -6,8 +6,8 @@ function SearchBar(props) {
     const type = props.type;
     const placeholder = props.placeholder;
         return (
-            <div className='Search'>
-                <div className='search__imputs'>
+            <div className='search'>
+                <div className='imput__wrapper'>
                     <input className = {className} type = {type} placeholder={placeholder}></input>
                     <div className='search__icon'><SearchIcon /></div>
                 </div>
