@@ -1458,7 +1458,9 @@ body {
 
     @include lg {
         width:30%;
-        position: relative;
-        top:70%;
+        position: absolute;
+        top:110%;
+        float: right;
+        left: 70%;
     }
 }
