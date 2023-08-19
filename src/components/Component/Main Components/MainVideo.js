@@ -3,6 +3,8 @@ import LikesIcon from '../../../assets/Icons/likes.svg';
 //import VideoDetails from '../../../data/video-details.json';
 import React, { useState, useEffect, Component } from 'react';
 import UserIcon1 from '../../../assets/Images/Mohan-muruge.jpg'
+import SideVideoList from './SideVideoList';
+
 
 
 // function MainVideo(props) {
@@ -97,6 +99,7 @@ const MainVideo = ({ mainVideo, comments }) => {
           Your browser does not support the video tag.
         </video>
       </div>
+      <div className='video__content--container'>
       <div className="video__details">
         <h1>{mainVideo.title}</h1>
       <div className='video__info'>
@@ -144,6 +147,7 @@ const MainVideo = ({ mainVideo, comments }) => {
             {/* </div> */}
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

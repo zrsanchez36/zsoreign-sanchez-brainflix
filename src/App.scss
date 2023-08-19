@@ -296,7 +296,7 @@ body {
     }
 
     @include xl {
-        width: 100%;
+        // width: 100%;
     }
 }
 
@@ -334,6 +334,10 @@ body {
     }
 
     @include sm {
+        width: 100%;
+    }
+
+    @include lg {
         width: 100%;
     }
 }
@@ -1160,4 +1164,27 @@ body {
         margin: 0;
     }
 
+}
+
+.Main {
+    @include lg {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+    }
+}
+
+.video__content--container {
+
+    @include lg {
+        width: 60%;
+        margin: 0;
+    }
+}
+
+.side__video--section {
+
+    @include lg {
+        width:30%;
+    }
 }
