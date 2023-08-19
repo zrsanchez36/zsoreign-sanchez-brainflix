@@ -1,6 +1,6 @@
-import ViewsIcon from '../../../3.0 - Assets/Icons/views.svg';
-import LikesIcon from '../../../3.0 - Assets/Icons/likes.svg';
-import VideoDetails from '../../../Data/video-details.json';
+import ViewsIcon from '../../../assets/Icons/views.svg';
+import LikesIcon from '../../../assets/Icons/likes.svg';
+import VideoDetails from '../../../data/video-details.json';
 import React, { useState, useEffect, Component } from 'react';
 import UserIcon1 from '../../../assets/Images/Mohan-muruge.jpg'
 import SideVideoList from './SideVideoList';
@@ -123,15 +123,15 @@ const MainVideo = ({ mainVideo, comments }) => {
       {/* Render comments */}
       <div className="comments__section">
         <h3>{comments.length} Comments</h3>
-        <div class="add__comment">
+        <div className="add__comment">
           <div className="comment__avatar--container">
             <img src= {UserIcon1} className='comment__avatar'></img>
           </div>
-          <div class="form__container">
+          <div className="form__container">
             <form>
               <h3>JOIN THE CONVERSATION</h3>
-              <textarea id="commentBox" class="comment__textbox" rows="10" placeholder="Add a new comment" required></textarea>
-                <input id="submit__button" type="submit" value="COMMENT" class="comment__button"></input>
+              <textarea id="commentBox" className="comment__textbox" rows="10" placeholder="Add a new comment" required></textarea>
+                <input id="submit__button" type="submit" value="COMMENT" className="comment__button"></input>
             </form>
           </div>
         </div>
@@ -148,6 +148,7 @@ const MainVideo = ({ mainVideo, comments }) => {
           </div>
         ))}
       </div>
+      
       </div>
     </div>
   );

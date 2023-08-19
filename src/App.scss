@@ -58,6 +58,13 @@ body {
     @include md {
         padding: 1rem;
     }
+
+    @include lg {
+        padding: 3rem;
+    }
+    @include xl {
+        padding: 3rem;
+    }
 }
 
 .site__navigation{
@@ -74,6 +81,18 @@ body {
     }
 
     @include md {
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    @include xl {
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    @include lg {
         align-content: center;
         flex-direction: row;
         flex-wrap: wrap;
@@ -106,6 +125,20 @@ body {
         align-content: center;
         display: flex;
     }
+
+    @include lg {
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        display: flex;
+    }
+
+    @include xl {
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        display: flex;
+    }
 }
 
 .header__logo {
@@ -121,6 +154,14 @@ body {
     @include md {
         order: 1;
     }
+
+    @include lg {
+        order: 1;
+    }
+
+    @include xl {
+        order: 1;
+    }
 }
 
 
@@ -134,12 +175,40 @@ body {
     @include md{
         float: right;
     }
+
+    @include lg{
+        float: right;
+    }
+
+    @include xl{
+        float: right;
+    }
 }
 
 .imput__wrapper {
 
     
     @include md {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem;
+        height: 36px;
+        width:240px;
+        position: relative;
+    }
+
+    @include lg {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem;
+        height: 36px;
+        width:240px;
+        position: relative;
+    }
+
+    @include xl {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -170,6 +239,18 @@ body {
         float: right;
         justify-self: flex-end;
     }
+
+    @include lg {
+        order:2;
+        float: right;
+        justify-self: flex-end;
+    }
+
+    @include xl {
+        order:2;
+        float: right;
+        justify-self: flex-end;
+    }
 }
 
 
@@ -192,6 +273,22 @@ body {
     }
     
     @include md {
+        order: 4;
+        width: 40px;
+        height:40px;
+        float:right;
+        justify-self: flex-end;
+    }
+
+    @include lg {
+        order: 4;
+        width: 40px;
+        height:40px;
+        float:right;
+        justify-self: flex-end;
+    }
+
+    @include xl {
         order: 4;
         width: 40px;
         height:40px;
@@ -318,7 +415,6 @@ body {
     @include lg {
         padding-bottom: 3rem;
         padding-left: 3rem;
-        padding-right: 3rem;
     }
 
     @include xl {
@@ -327,6 +423,13 @@ body {
         padding-right: 3rem;
     }
 }
+
+.video__details {
+    @include lg {
+        padding-right: 1rem;
+    }
+}
+
 
 .video__container {
     @include xs {
@@ -408,6 +511,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
+        padding-bottom: 1rem;
     }
 
     @include lg {
@@ -416,6 +520,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
+        padding-bottom: 1rem;
     }
 
     @include xl {
@@ -427,6 +532,18 @@ body {
     }
 
 }
+
+.channel__details p {
+    @include lg {
+        font-size:0.875rem; //14px
+        color: silver;
+    }
+
+    @include xl{
+        font-size:0.875rem; //14px
+    }
+}
+
 
 .video__details h1 {
     @include md {
@@ -445,6 +562,22 @@ body {
         font-size: 33px;
         line-height: 44px;
         font-weight: 700;
+    }
+}
+
+.video__details p {
+    @include md{
+        font-size:0.875rem; //14px
+
+    }
+   
+
+    @include lg{
+        font-size:0.875rem; //14px
+    }
+
+    @include xl{
+        font-size:0.875rem; //14px
     }
 }
 
@@ -555,6 +688,19 @@ body {
 
     @include md {
         margin: 0;
+        color: silver;
+        font-size:0.875rem;
+        line-height: 1.375rem;
+        font-weight: 400;
+    }
+
+    
+    @include md {
+        margin: 0;
+        color: silver;
+        font-size:0.875rem;
+        line-height: 1.375rem;
+        font-weight: 400;
     }
 }
 
@@ -593,6 +739,11 @@ body {
         order: 2;
         float: right;
         width: 15rem;
+        color: silver;
+        font-size:0.875rem;
+        line-height: 1.375rem;
+        font-weight: 400;
+        
     }
 
     @include lg {
@@ -602,6 +753,9 @@ body {
         order: 2;
         float: right;
         width: 15rem;
+        justify-content: flex-end;
+        justify-self: flex-end;
+        
     }
 
     @include xl {
@@ -613,6 +767,7 @@ body {
         width: 10rem;
     }
 }
+
 
 .video__stat--container {
     @include xs {
@@ -632,6 +787,11 @@ body {
         width: 10rem;
         flex-direction: row;
     }
+
+    @include lg {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .views__icon, .likes__icon {
@@ -641,6 +801,16 @@ body {
     }
 
     @include sm {
+        display: inline-block;
+        padding-right: 1rem;
+    }
+
+    @include md {
+        display: inline-block;
+        padding-right: 1rem;
+    }
+
+    @include lg {
         display: inline-block;
         padding-right: 1rem;
     }
@@ -658,6 +828,10 @@ body {
         margin: 0;
     }
 }
+
+
+//comment section
+
 
 .comments__section {
     @include xs {
@@ -683,7 +857,6 @@ body {
 
     @include lg {
         padding-bottom: 3rem;
-        padding-right: 3rem;
         padding-left: 3rem;
         height: auto;
     }
@@ -746,6 +919,13 @@ body {
         width: 40px;
 
     }
+
+    @include lg {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+
+    }
 }
 
 .comment__avatar--blank{
@@ -770,6 +950,16 @@ body {
     }
 
     @include md {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        background-color: map-get($colors , Brain_Flix_Mercury );
+        margin-right: .5rem;
+        order: 1;
+        margin-top: 1rem;
+    }
+
+    @include lg{
         border-radius: 50%;
         height: 40px;
         width: 40px;
@@ -806,6 +996,17 @@ body {
         justify-content: flex-end;
         width: 100%;
         border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+        padding-bottom: 1rem;
+    }
+
+    @include lg {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+        padding-bottom: 1rem;
     }
 }
 
@@ -821,6 +1022,13 @@ body {
     }
 
     @include md {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    @include lg {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -878,6 +1086,13 @@ body {
             min-width: 240px;
             min-height: 40px;
         }
+
+        @include lg {
+            height: 40px;
+            padding: 12px;
+            min-width: 240px;
+            min-height: 40px;
+        }
 }
 
 .comment__button {
@@ -913,6 +1128,16 @@ body {
     color: white;
     float: right;
     }
+
+    @include lg {
+        background-color: map-get($colors, BrainFlix_Blue ); 
+        height: 40px;
+        width: 150px;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        float: right;
+        }
 }
 
 .comment {
@@ -946,6 +1171,18 @@ body {
         padding-bottom: 1rem;
         border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
     }
+
+
+    @include lg{
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-bottom: 1rem;
+        margin-right: 1rem;
+        border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+    }
 }
 
 .comment__details {
@@ -958,6 +1195,10 @@ body {
     }
 
     @include md {
+        display: flex;
+    }
+
+    @include lg{
         display: flex;
     }
 }
@@ -976,6 +1217,12 @@ body {
     }
 
     @include md {
+        margin: 0;
+        order: 2;
+        margin-top: 1rem;
+    }
+
+    @include lg {
         margin: 0;
         order: 2;
         margin-top: 1rem;
@@ -1014,6 +1261,16 @@ body {
         // height: 2rem;
         order: 3;
     }
+
+    @include lg {
+        flex: 2 1 auto;
+        justify-self: right;
+        text-align: right;
+        float: right;
+        // width: 2rem;
+        // height: 2rem;
+        order: 3;
+    }
 }
 
 .comment__text {
@@ -1034,7 +1291,17 @@ body {
         padding-left: 3rem;
         margin: 0;
     }
+
+    @include lg {
+        order: 4;
+        padding-left: 3rem;
+        margin: 0;
+    }
 }
+
+
+//side video
+
 
 .next__video {
     @include xs {
@@ -1044,6 +1311,12 @@ body {
     }
 
     @include sm {
+        color: silver;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    @include md {
         color: silver;
         margin: 0;
         margin-bottom: 1rem;
@@ -1168,9 +1441,6 @@ body {
 
 .Main {
     @include lg {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr ;
     }
 }
 
@@ -1179,6 +1449,8 @@ body {
     @include lg {
         width: 60%;
         margin: 0;
+        padding-left: 3rem;
+        border-right: 1px solid map-get($colors , Brain_Flix_Mercury);
     }
 }
 
