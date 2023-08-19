@@ -90,7 +90,7 @@ import SideVideoList from './SideVideoList';
 //   export default MainVideo;
 
 
-const MainVideo = ({ mainVideo, comments }) => {
+const MainVideo = ({ mainVideo, comments,sideVideos }) => {
   return (
     <div className="main__video">
       <div className="video__container">
