@@ -716,13 +716,33 @@ body {
         margin-right: 1rem;
         margin-top: 1rem;
     }
+    
+    
+    @include lg {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+
+    @include xl {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
 }
 
-// .comment__avatar--container {
-//     @include xs {
+.comment__avatar--container {
+    @include md {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
 
-//     }
-// }
+    }
+}
 
 .comment__avatar--blank{
     @include xs {
@@ -744,6 +764,18 @@ body {
         margin-right: 1rem;
         order: 1;
     }
+
+    @include md {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        background-color: map-get($colors , Brain_Flix_Mercury );
+        margin-right: .5rem;
+        order: 1;
+        margin-top: 1rem;
+    }
+
+    
 }
 
 .add__comment {
@@ -762,6 +794,15 @@ body {
         width: 100%;
         border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
     }
+
+    @include md {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+    }
 }
 
 .form__container {
@@ -773,6 +814,13 @@ body {
     @include sm {
         width: 80%;
         float: right;
+    }
+
+    @include md {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
     }
 
 }
@@ -792,7 +840,6 @@ body {
 
 
 .comment__textbox {
-        width: 100%;
         box-sizing: border-box;
         background-color:  map-get($colors , bg__alt--col);
         border: 1px solid map-get($colors , Brain_Flix_Mercury );
@@ -820,18 +867,48 @@ body {
             padding: 12px;
             width: 100%;
         }
+
+        @include md {
+            height: 40px;
+            padding: 12px;
+            min-width: 240px;
+            min-height: 40px;
+        }
 }
 
 .comment__button {
+    
+    @include xs {
     background-color: map-get($colors, BrainFlix_Blue ); 
     height: 40px;
-    min-width: 150px;
     border-radius: 4px;
     border: none;
     color: white;
     font-weight: 700;
     width: 100%;
     margin-bottom: 1rem;
+    }
+
+    @include sm {
+    background-color: map-get($colors, BrainFlix_Blue ); 
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 1rem;
+    }
+
+    @include md {
+    background-color: map-get($colors, BrainFlix_Blue ); 
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    float: right;
+    }
 }
 
 .comment {
@@ -855,6 +932,16 @@ body {
         padding-bottom: 1rem;
         border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
     }
+
+    @include md {
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
+    }
 }
 
 .comment__details {
@@ -863,6 +950,10 @@ body {
     }
 
     @include sm {
+        display: flex;
+    }
+
+    @include md {
         display: flex;
     }
 }
@@ -878,6 +969,12 @@ body {
         margin: 0;
         margin-top: 1rem;
         order: 2;
+    }
+
+    @include md {
+        margin: 0;
+        order: 2;
+        margin-top: 1rem;
     }
 }
 
@@ -903,6 +1000,16 @@ body {
         // height: 2rem;
         order: 3;
     }
+
+    @include md {
+        flex: 2 1 auto;
+        justify-self: right;
+        text-align: right;
+        float: right;
+        // width: 2rem;
+        // height: 2rem;
+        order: 3;
+    }
 }
 
 .comment__text {
@@ -917,6 +1024,12 @@ body {
         padding-left: 3rem;
         margin: 0;
     }
+
+    @include md {
+        order: 4;
+        padding-left: 3rem;
+        margin: 0;
+    }
 }
 
 .next__video {
@@ -927,6 +1040,12 @@ body {
     }
 
     @include sm {
+        color: silver;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    @include md {
         color: silver;
         margin: 0;
         margin-bottom: 1rem;
@@ -952,6 +1071,15 @@ body {
         padding-bottom: 1rem;
         
     }
+
+    @include md {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+    }
 }
 
 .side__video {
@@ -971,6 +1099,14 @@ body {
         padding-top: .5rem;
         padding-bottom: .5rem;
         }
+
+        @include md {
+            display: flex;
+            flex-wrap: wrap;
+            width:100%;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            }
 }
 
 
@@ -1003,6 +1139,11 @@ body {
         padding-left: 1rem;
         padding-top: .25rem;
     }
+
+    @include md {
+        padding-left: 1rem;
+        
+    }
     
 }
 
@@ -1010,4 +1151,13 @@ body {
     @include xs {
         margin: 0;
     }
+
+    @include sm {
+        margin: 0;
+    }
+
+    @include md {
+        margin: 0;
+    }
+
 }
