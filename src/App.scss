@@ -1186,5 +1186,7 @@ body {
 
     @include lg {
         width:30%;
+        position: relative;
+        top:70%;
     }
 }

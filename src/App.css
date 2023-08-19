@@ -1206,5 +1206,7 @@ body {
 @media (min-width: 1279px) and (max-width: 1480px) {
   .side__video--section {
     width: 30%;
+    position: relative;
+    top: 70%;
   }
 }/*# sourceMappingURL=App.css.map */
