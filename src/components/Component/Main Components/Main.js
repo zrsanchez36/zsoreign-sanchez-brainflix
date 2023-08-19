@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-//import sideVideoData from '../../../data/videos.json';
-import mainVideoData from '../../../data/video-details.json';
+import sideVideoData from '../../../Data/videos.json';
+import mainVideoData from '../../../Data/video-details.json';
 import MainVideo from './MainVideo';
 import CommentsSection from './CommentsSection';
 import SideVideoList from './SideVideoList';
@@ -39,7 +39,7 @@ function Main() {
 
 export default Main;
 
-
+// Maybe try array.filter or array.find
 
 
 
