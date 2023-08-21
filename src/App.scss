@@ -60,10 +60,10 @@ body {
     }
 
     @include lg {
-        padding: 3rem;
+        padding: 1rem;
     }
     @include xl {
-        padding: 3rem;
+        padding: 1rem;
     }
 }
 
@@ -84,18 +84,24 @@ body {
         align-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-    }
-
-    @include xl {
-        align-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     @include lg {
         align-content: center;
         flex-direction: row;
         flex-wrap: wrap;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    @include xl {
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     
@@ -122,8 +128,8 @@ body {
     @include md {
         align-items: center;
         justify-content: center;
-        align-content: center;
         display: flex;
+        // padding: 1rem;
     }
 
     @include lg {
@@ -131,6 +137,7 @@ body {
         justify-content: center;
         align-content: center;
         display: flex;
+        height: 100%;
     }
 
     @include xl {
@@ -138,6 +145,7 @@ body {
         justify-content: center;
         align-content: center;
         display: flex;
+        height: 100%;
     }
 }
 
@@ -174,6 +182,7 @@ body {
 
     @include md{
         float: right;
+        margin-left: auto;
     }
 
     @include lg{
@@ -195,7 +204,8 @@ body {
         padding: 1rem;
         height: 36px;
         width:240px;
-        position: relative;
+        // margin-left: 54px ;
+        align-self: flex-end;
     }
 
     @include lg {
@@ -205,7 +215,7 @@ body {
         padding: 1rem;
         height: 36px;
         width:240px;
-        position: relative;
+        margin-left: auto;
     }
 
     @include xl {
@@ -215,7 +225,7 @@ body {
         padding: 1rem;
         height: 36px;
         width:240px;
-        position: relative;
+        margin-left: auto;
     }
 }
 
@@ -237,19 +247,16 @@ body {
     @include md {
         order:2;
         float: right;
-        justify-self: flex-end;
     }
 
     @include lg {
         order:2;
         float: right;
-        justify-self: flex-end;
     }
 
     @include xl {
         order:2;
         float: right;
-        justify-self: flex-end;
     }
 }
 
@@ -277,7 +284,9 @@ body {
         width: 40px;
         height:40px;
         float:right;
-        justify-self: flex-end;
+        // align-self: flex-end;
+        padding: 1rem;
+        //margin-left: auto;
     }
 
     @include lg {
@@ -286,6 +295,7 @@ body {
         height:40px;
         float:right;
         justify-self: flex-end;
+        margin-left: auto;
     }
 
     @include xl {
@@ -310,7 +320,48 @@ body {
     }
 
     @include md {
+        display: flex;
         order: 3;
+        float: right;
+        justify-content: center;
+        height: 40px;
+        min-width: 150px;
+        border-radius: 4px;
+        padding:1rem;
+    }
+
+    @include md {
+        display: flex;
+        order: 3;
+        float: right;
+        justify-content: center;
+        height: 40px;
+        min-width: 150px;
+        border-radius: 4px;
+        padding:1rem;
+    }
+
+    @include lg {
+        display: flex;
+        order: 3;
+        float: right;
+        justify-content: center;
+        height: 40px;
+        min-width: 150px;
+        border-radius: 4px;
+        padding:1rem;
+        margin-left: auto;
+    }
+
+    @include xl {
+        display: flex;
+        order: 3;
+        float: right;
+        justify-content: center;
+        height: 40px;
+        min-width: 150px;
+        border-radius: 4px;
+        padding:1rem;
     }
 } 
 
@@ -323,11 +374,20 @@ body {
     color: white;
     font-weight: 700;
 
+    &:hover {
+        background-color: map-get($colors , BrainFlix_DarkBlue );
+        cursor: pointer;
+    }
+
     @include xs {
         width: 100%;
     }
 
     @include sm {
+        width: 100%;
+    }
+
+    @include md {
         width: 100%;
     }
 }
@@ -356,18 +416,27 @@ body {
 
 .search__icon {
     @include xs {
-        place-items: center;
+        position: absolute;
     }
 
     @include sm {
-        place-items: center;
+        position: absolute;
 
     }
 
     @include md {
         position: absolute;
     }
+
+    @include lg {
+        position: absolute;
+    }
+
+    @include xl {
+        position: absolute;
+    }
 }
+
 
 
 
@@ -442,6 +511,9 @@ body {
 
     @include lg {
         width: 100%;
+        height: 770px;
+        // position: absolute;
+        // padding-bottom: 56.25%;
     }
 }
 
@@ -474,6 +546,7 @@ body {
         top: 0;
         left: 0;
         width:100%;
+        height: 100%;
         background-color: black;
     }
     
@@ -905,8 +978,8 @@ body {
 
     @include xl {
         border-radius: 50%;
-        height: 40px;
-        width: 40px;
+        height: 100%;
+        width: 100%;
         margin-right: 1rem;
         margin-top: 1rem;
     }
@@ -924,7 +997,9 @@ body {
         border-radius: 50%;
         height: 40px;
         width: 40px;
-
+        position: relative;
+        justify-content: center;
+        padding: 1rem;
     }
 }
 
@@ -1032,7 +1107,8 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 80%;
+        width: 85%;
+        padding: 1rem;
     }
 
 }
@@ -1089,44 +1165,50 @@ body {
 
         @include lg {
             height: 40px;
-            padding: 12px;
+            //padding: 12px;
             min-width: 240px;
             min-height: 40px;
+            margin-right: 1rem;
+            width: 80%;
         }
 }
 
 .comment__button {
+    background-color: map-get($colors, BrainFlix_Blue ); 
+
+    &:hover {
+        background-color: map-get($colors , BrainFlix_DarkBlue );
+        cursor: pointer;
+    }
     
     @include xs {
-    background-color: map-get($colors, BrainFlix_Blue ); 
-    height: 40px;
-    border-radius: 4px;
-    border: none;
-    color: white;
-    font-weight: 700;
-    width: 100%;
-    margin-bottom: 1rem;
+        height: 40px;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        font-weight: 700;
+        width: 100%;
+        margin-bottom: 1rem;
     }
 
     @include sm {
-    background-color: map-get($colors, BrainFlix_Blue ); 
-    height: 40px;
-    border-radius: 4px;
-    border: none;
-    color: white;
-    font-weight: 700;
-    width: 100%;
-    margin-bottom: 1rem;
+        height: 40px;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        font-weight: 700;
+        width: 100%;
+        margin-bottom: 1rem;
     }
 
     @include md {
-    background-color: map-get($colors, BrainFlix_Blue ); 
-    height: 40px;
-    width: 150px;
-    border-radius: 4px;
-    border: none;
-    color: white;
-    float: right;
+        background-color: map-get($colors, BrainFlix_Blue ); 
+        height: 40px;
+        width: 150px;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        float: right;
     }
 
     @include lg {
@@ -1137,7 +1219,7 @@ body {
         border: none;
         color: white;
         float: right;
-        }
+    }
 }
 
 .comment {
@@ -1360,6 +1442,7 @@ body {
 }
 
 .side__video {
+    
     @include xs {
         display: flex;
         flex-wrap: wrap;
@@ -1384,10 +1467,21 @@ body {
             padding-top: .5rem;
             padding-bottom: .5rem;
             }
+
+        @include lg {
+            display: flex;
+            flex-wrap: wrap;
+            width:100%;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            }
 }
 
 
 .side__video--container {
+    &:hover {
+        cursor: pointer;
+    }
     border-radius: 4px;
     width: 8rem;
     height: 5rem;
@@ -1421,6 +1515,11 @@ body {
         padding-left: 1rem;
         
     }
+
+    @include lg {
+        padding-left: 1rem;
+        
+    }
     
 }
 
@@ -1434,6 +1533,10 @@ body {
     }
 
     @include md {
+        margin: 0;
+    }
+
+    @include lg {
         margin: 0;
     }
 
@@ -1459,8 +1562,16 @@ body {
     @include lg {
         width:30%;
         position: absolute;
-        top:110%;
+        top:100%;
         float: right;
-        left: 70%;
+        left: 65%;
+    }
+
+    @include xl {
+        width:30%;
+        position: absolute;
+        top:100%;
+        float: right;
+        left: 65%;
     }
 }
