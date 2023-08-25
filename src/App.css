@@ -101,7 +101,6 @@ body {
 
 .header__logo--container {
   max-height: 25px;
-  max-width: 120px;
 }
 @media screen and (min-width: 0) and (max-width: 767px) {
   .header__logo--container {
@@ -109,6 +108,7 @@ body {
     width: 100%;
     align-items: center;
     justify-content: center;
+    padding-bottom: 1rem;
   }
 }
 @media (min-width: 767px) and (max-width: 768px) {
@@ -117,6 +117,7 @@ body {
     width: 100%;
     align-items: center;
     justify-content: center;
+    padding-bottom: 1rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -182,6 +183,20 @@ body {
   display: flex;
   flex-direction: row;
 }
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .search {
+    width: 75%;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 768px) {
+  .search {
+    width: 75%;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+  }
+}
 @media (min-width: 768px) and (max-width: 1279px) {
   .search {
     float: right;
@@ -201,6 +216,24 @@ body {
   }
 }
 
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .imput__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 36px;
+    width: 100%;
+  }
+}
+@media (min-width: 767px) and (max-width: 768px) {
+  .imput__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 36px;
+    width: 100%;
+  }
+}
 @media (min-width: 768px) and (max-width: 1279px) {
   .imput__wrapper {
     display: flex;
@@ -499,6 +532,12 @@ body {
     height: 770px;
   }
 }
+@media (min-width: 1480px) {
+  .video__container {
+    width: 100%;
+    height: 770px;
+  }
+}
 
 @media screen and (min-width: 0) and (max-width: 767px) {
   .video__poster {
@@ -542,6 +581,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     background-color: black;
   }
 }
