@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import {ReactComponent as UploadIcon } from '../../assets/Icons/upload.svg';
 
 function UploadButton(props) {
     const className = props.className;
@@ -7,6 +7,7 @@ function UploadButton(props) {
         return(
             <div className="header__button--container">
                 <button className={className} type="button">{label}</button>
+                <div className={className}><UploadIcon /></div>
             </div>
         );
 }
