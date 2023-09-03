@@ -7,7 +7,7 @@ function UploadButton(props) {
         return(
             <div className="header__button--container">
                 <button className={className} type="button">{label}</button>
-                <div className={className}><UploadIcon /></div>
+                <div className="upload__icon--container"><UploadIcon /></div>
             </div>
         );
 }

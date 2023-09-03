@@ -411,6 +411,8 @@ body {
 
     @include xs {
         width: 100%;
+        position: relative;
+        z-index: 1;
     }
 
     @include sm {
@@ -422,6 +424,15 @@ body {
     }
 }
 
+
+.upload__icon--container {
+
+    @include xs {
+        z-index: 2;
+        position: absolute;
+        
+    }
+}
 // .header__search {
 //     min-width: 240px;
 //     border-radius: 4px;
