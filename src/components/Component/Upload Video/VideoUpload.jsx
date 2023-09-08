@@ -2,10 +2,15 @@ import React from "react";
 import videoThumbnail from "../../../assets/Images/Upload-video-preview.jpg";
 import UploadButton from "../Button";
 
-function UploadForm () {
+function VideoUpload () {
     //const className = props.className;
     //const alt = props.alt
-
+ 
+    // Handle form submission (you can add this functionality)
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle video upload form submission here
+  };
     return (
         <div className="upload--form__section">
             <div className="video__thumbnail--container" >
@@ -32,4 +37,4 @@ function UploadForm () {
 }
 
 
-export default UploadForm;
+export default VideoUpload;

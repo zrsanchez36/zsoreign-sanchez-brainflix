@@ -1,17 +1,18 @@
-import React from 'react';
-import SideVideo from './SideVideo';
 
-const SideVideoList = ({ sideVideos, onSideVideoClick }) => {
+
+import React from 'react';
+import VideoListItem from '../VideoListItem';
+
+
+
+function VideoList({ videos,  onSideVideoClick }) {
   return (
-    <section className='side__video--section'>
-    <div className="side__video--list">
-      <h4 className='next__video'>Next Videos</h4>
-      {sideVideos.map(video => (
-        <SideVideo key={video.id} video={video} onClick={() => onSideVideoClick(video.id)} className='side__video--img' />
+    <div className="side-videos">
+      {videos.map((video) => (
+        <VideoListItem key={video.id} video={video} onSideVideoClick={onSideVideoClick}/>
       ))}
     </div>
-    </section>
   );
-};
+}
 
-export default SideVideoList;
+export default VideoList;

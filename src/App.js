@@ -1,30 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-import SearchBar from './components/Component/DefaultSearchBar';
-import Button from './components/Component/Button';
-import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
-import axios from 'axios';
-
-// Pages
-import Main from './components/Component/Main Components/Main';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Component/SiteDefaultHeader';
-import UploadVideo from './components/Component/Upload Video/UploadVideo';
-
-
-
-
+import HomePage from './pages/Page/HomePage';
+import VideoDetails from './components/Component/VideoDetails';
+import VideoUpload from './components/Component/Upload Video/VideoUpload';
+import NotFound from './components/Component/NotFound';
+import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
+    <Router>
+      <div className="app">
+        <Header  />
         <Routes>
-          <Route path='/' element={<Header />} />
-          <Route path='/main' element = {<Main />} />
-          <Route path='/uploadvideo' element ={<UploadVideo />} />
-        </Routes>    
-    </div>
-    </BrowserRouter>
+          <Route path="*" exact element={<HomePage /> } />
+          <Route path="/video/:videoId" element={<VideoDetails />} />
+          <Route path="/upload" element={<VideoUpload />} />
+          <Route element={<NotFound />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

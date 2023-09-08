@@ -1,16 +1,12 @@
-import React from "react";
-import UploadForm from "./UploadForm";
+import React from 'react';
 
-function UploadVideo () {
-
-    return(
-        <section className="upload__section">
-            <div className="upload__section--container">
-                <h1>Upload Video</h1>
-                <UploadForm />
-            </div>
-        </section>
-    );
+function VideoUploadPage() {
+  // This component can be implemented later for video uploads
+  return (
+    <div className="video-upload-page">
+      {/* Add video upload form and components here */}
+    </div>
+  );
 }
 
-export default UploadVideo;
+export default VideoUploadPage;
