@@ -1,6 +1,6 @@
 import React from "react";
 import videoThumbnail from "../../../assets/Images/Upload-video-preview.jpg";
-import UploadButton from "../Button";
+import UploadButton from "../../../components/Component/Button";
 
 function VideoUpload () {
     //const className = props.className;

@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "avenir_next_lt_probold";
+  src: url("/src/assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff2") format("woff2"), url("/src/assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir_next_lt_prodemi";
+  src: url("/src/assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff2") format("woff2"), url("/src/assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir_next_lt_proregular";
+  src: url("/src/assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff2") format("woff2"), url("/src/assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .main__video {
+    width: 100%;
+  }
+}
+@media (min-width: 767px) and (max-width: 768px) {
+  .main__video {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main__video {
+    width: 100%;
+  }
+}
+@media (min-width: 1279px) and (max-width: 1480px) {
+  .main__video {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .video__details {
+    padding: 1rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 768px) {
+  .video__details {
+    padding: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .video__details {
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (min-width: 1279px) and (max-width: 1480px) {
+  .video__details {
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+  }
+}
+@media (min-width: 1480px) {
+  .video__details {
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .video__container {
+    width: 100%;
+  }
+}
+@media (min-width: 767px) and (max-width: 768px) {
+  .video__container {
+    width: 100%;
+  }
+}
+@media (min-width: 1279px) and (max-width: 1480px) {
+  .video__container {
+    width: 100%;
+    height: 770px;
+  }
+}
+@media (min-width: 1480px) {
+  .video__container {
+    width: 100%;
+    height: 770px;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .video__poster {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 767px) and (max-width: 768px) {
+  .video__poster {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .video__poster {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+  }
+}
+@media (min-width: 1279px) and (max-width: 1480px) {
+  .video__poster {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+}
+@media (min-width: 1480px) {
+  .video__poster {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+}/*# sourceMappingURL=homePage.css.map */

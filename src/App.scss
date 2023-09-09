@@ -1592,7 +1592,7 @@ body {
     @include xs {
         display: flex;
         flex-wrap: wrap;
-        //flex-direction: column;
+        flex-direction: column;
         width:100%;
         padding-top: .5rem;
         padding-bottom: .5rem;
@@ -1637,12 +1637,38 @@ body {
     &:hover {
         cursor: pointer;
     }
+    @include xs {
+        padding-left: 1rem;
+        padding-top: .25rem;
+        padding-right: 1rem;
+        width: 100%;
+    }
+
+    @include sm {
+        padding-left: 1rem;
+        padding-top: .25rem;
+        padding-right: 1rem;
+    }
+        
+}
+
+.video__container {
+    @include xs {
+    }
+
+    @include sm {
+        padding-left: 1rem;
+        padding-top: .25rem;
+        padding-right: 1rem;
+    }
+}
+
+.video-item {
     border-radius: 4px;
     width: 8rem;
     height: 5rem;
     margin: 0;
     background-size:contain;
-        
 }
 
 .side__video--container img {
