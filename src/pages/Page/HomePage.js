@@ -71,7 +71,7 @@ function HomePage() {
     const { videoId } = useParams();
     const [mainVideo, setMainVideo] = useState(null);
     const [sideVideos, setSideVideos] = useState([]);
-
+    const [comments, setComments] = useState([]);
     useEffect(() => {
         async function fetchVideos() {
             try {
@@ -88,7 +88,7 @@ function HomePage() {
                 // Filter out the main video from the side videos list
                 const filteredSideVideos = allVideos.data.filter(video => video.id !== currentVideoId);
                 setSideVideos(filteredSideVideos);
-
+                setComments(mainVideoResponse.data.comments);
             } catch (error) {
                 console.error("Error fetching videos:", error.response?.data || error.message);
             }
@@ -147,7 +147,24 @@ function HomePage() {
                      </form>
                     </div>
                     </div>
+                    <div className='comment__area'>
+                    <h2>Comments</h2>
+            {comments.map(comment => (
+                <div key={comment.id} className='comment'>
+                  
+                    <div className="comment__avatar--blank"> </div>
+                      <h4 className='user__name'>{comment.name}</h4>
+                      <p className='time__stamp'>{comment.timestamp}</p>
+                      <p className='comment__text'>{comment.comment}</p>
                   </div>
+                
+            ))}
+                  </div>
+                  </div>
+
+
+
+
               </section>
           )}
 
@@ -155,15 +172,19 @@ function HomePage() {
 
           <section className='side__video--section'>
             <div className='side__video--list'>
-            <h3>Next Videos</h3>
+            <h4 className='next__video'>Next Videos</h4>
               {sideVideos.map(video => (
-                  <Link key={video.id} to={`/video-details/${video.id}`}>
-                      <div>
-                          <img src={video.image} alt={video.title} />
-                          <h3>{video.title}</h3>
-                          <p>{video.channel}</p>
-                      </div>
+                <div className='side__video'>
+                  <Link key={video.id} to={`/video-details/${video.id}` } className='side__video--img'>
+                    <div className='side__video--container'>
+                          <img src={video.image} alt={video.title} className='side__video--img' />
+                    </div>
+                          <div className="side__video--info">
+                            <h3>{video.title}</h3>
+                            <p>{video.channel}</p>
+                          </div>
                   </Link>
+                </div>
               ))}
               </div>
           </section>

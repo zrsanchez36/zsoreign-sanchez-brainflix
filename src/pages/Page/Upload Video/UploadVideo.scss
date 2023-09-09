@@ -46,4 +46,46 @@ body {
 }
 
 
+.upload__thumbnail--container {
+    
+
+    @include xs {
+        width: 90%;
+        height: 90%;
+        margin-right: 0;
+        padding-left: 1rem;
+        border-radius: 4px;
+    }
+
+    @include sm {
+        
+    }
+
+    @include md {
+        
+        
+    }
+
+    @include lg {
+        
+        
+    }
+
+    @include xl {
+        
+        
+    }
+    
+}
+
+.upload__thumbnail {
+
+    @include xs {
+        width: 100%;
+        margin: 0;
+        border-radius: 4px;
+    }
+}
+
+
 

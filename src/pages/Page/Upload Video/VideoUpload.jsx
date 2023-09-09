@@ -1,6 +1,7 @@
 import React from "react";
 import videoThumbnail from "../../../assets/Images/Upload-video-preview.jpg";
 import UploadButton from "../../../components/Component/Button";
+import './UploadVideo.css';
 
 function VideoUpload () {
     //const className = props.className;
@@ -12,10 +13,13 @@ function VideoUpload () {
     // Handle video upload form submission here
   };
     return (
-        <div className="upload--form__section">
+        <div className="upload__form--section">
+            <h1>Upload Video</h1>
             <div className="video__thumbnail--container" >
                 <h3>Video Thumbnail</h3>
-                <img src={videoThumbnail} className='upload__thumbnail' alt="thumbnail"></img>
+                <div className="upload__thumbnail--container">
+                    <img src={videoThumbnail} className='upload__thumbnail' alt="thumbnail"></img>
+                </div>
             </div>
             <div className="upload__form--container">
                 <form className="upload__form">

@@ -25,4 +25,21 @@ body {
   margin: 0px;
   padding: 0;
   border: none;
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .upload__thumbnail--container {
+    width: 90%;
+    height: 90%;
+    margin-right: 0;
+    padding-left: 1rem;
+    border-radius: 4px;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .upload__thumbnail {
+    width: 100%;
+    margin: 0;
+    border-radius: 4px;
+  }
 }/*# sourceMappingURL=UploadVideo.css.map */
