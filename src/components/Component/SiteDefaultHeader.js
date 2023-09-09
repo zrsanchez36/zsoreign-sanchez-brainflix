@@ -55,7 +55,6 @@ function Header({setMainVideo, setVideos}) {
         </Link>
         <SearchBar className = 'header__search' type = 'text' placeholder = 'Search' />
         <UserImage className = 'header__userimage' alt = 'user' />
-      <Link to="/">Home</Link>
       <Link to="/upload"  className="header__nav--link">
         <UploadButton className = 'header__button' label='UPLOAD'  />
       </Link>
