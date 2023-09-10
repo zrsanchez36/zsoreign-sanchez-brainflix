@@ -28,9 +28,27 @@ body {
 }
 
 @media screen and (min-width: 0) and (max-width: 767px) {
+  .upload__form--section {
+    border-top: 1px solid #E1E1E1;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .upload__form--section h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .upload__form--section h3 {
+    color: silver;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
   .upload__thumbnail--container {
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     margin-right: 0;
     padding-left: 1rem;
     border-radius: 4px;
@@ -41,5 +59,44 @@ body {
     width: 100%;
     margin: 0;
     border-radius: 4px;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .upload__form--container {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .upload__form--container h3 {
+    color: silver;
+  }
+}
+
+.video__title {
+  min-width: 240px;
+}
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .video__title {
+    border-radius: 4px;
+    width: 100%;
+  }
+}
+
+.video__description {
+  min-width: 240px;
+}
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .video__description {
+    border-radius: 4px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .cancel__container {
+    text-align: center;
+    color: #0095ff;
   }
 }/*# sourceMappingURL=UploadVideo.css.map */

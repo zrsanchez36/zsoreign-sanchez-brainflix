@@ -1,7 +1,8 @@
 import React from "react";
 import videoThumbnail from "../../../assets/Images/Upload-video-preview.jpg";
-import UploadButton from "../../../components/Component/Button";
+import UploadButton from '../Upload Video/PublishButton';
 import './UploadVideo.css';
+import {ReactComponent as UploadIcon}from '../../../assets/Icons/upload.svg';
 
 function VideoUpload () {
     //const className = props.className;
@@ -28,9 +29,10 @@ function VideoUpload () {
                     <h3>ADD A VIDEO DESCRIPTION</h3>
                     <textarea id="videoDescriptiob" className="video__description" rows="10" placeholder="Add a description to your video" required></textarea>
                     <div className="upload__button--container">
-                        <UploadButton className= "upload__button" />
+                        <div className="upload__icon--container"><UploadIcon/></div>
+                        <UploadButton className= "header__button" label='PUBLISH' />
                     </div>
-                    <div className="cancel__container"><h3>CANCEL</h3></div>
+                    <div className="cancel__container"><h2>CANCEL</h2></div>
                 </form>
             </div>
         </div>
