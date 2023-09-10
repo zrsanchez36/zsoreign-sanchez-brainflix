@@ -46,12 +46,33 @@ body {
 }
 
 
+.upload__form--section {
+    @include xs {
+        border-top: 1px solid #E1E1E1;
+    }
+
+
+}
+
+.upload__form--section h1 {
+    @include xs {
+        font-size: 1.5rem;
+    }
+}
+
+.upload__form--section h3{
+    @include xs {
+        color: silver;
+    }
+}
+
+
 .upload__thumbnail--container {
     
 
     @include xs {
-        width: 90%;
-        height: 90%;
+        width: 95%;
+        height: 95%;
         margin-right: 0;
         padding-left: 1rem;
         border-radius: 4px;
@@ -88,4 +109,44 @@ body {
 }
 
 
+.upload__form--container {
+    @include xs {
+        padding: 1rem;
+    }
+}
 
+.upload__form--container h3 {
+    @include xs {
+        color: silver;
+    }
+}
+
+.video__title {
+    min-width: 240px;
+    @include xs {
+        border-radius: 4px;
+        width: 100%;
+    }
+}
+
+
+.video__description {
+    min-width: 240px;
+    @include xs {
+        border-radius: 4px ;
+        width: 100%;
+    }
+}
+
+.upload__icon--container {
+    @include xs {
+        
+    }
+}
+
+.cancel__container {
+    @include xs {
+        text-align: center;
+        color: map-get($colors , BrainFlix_Blue);
+    }
+}
