@@ -95,6 +95,12 @@ body {
 }
 
 @media screen and (min-width: 0) and (max-width: 767px) {
+  .upload__icon--container {
+    padding-top: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
   .cancel__container {
     text-align: center;
     color: #0095ff;
