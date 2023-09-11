@@ -51,17 +51,47 @@ body {
         border-top: 1px solid #E1E1E1;
     }
 
+    @include sm {
+        border-top: 1px solid #E1E1E1;
+    }
+    
+    @include md {
+        border-top: 1px solid #E1E1E1;
+        padding: 3rem;
+    }
 
 }
 
 .upload__form--section h1 {
     @include xs {
         font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+    
+    @include sm {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+
+    @include md {
+        font-size: 2.063rem;
+        line-height: 2.75rem;
+        font-weight: 700;
     }
 }
 
 .upload__form--section h3{
     @include xs {
+        color: silver;
+    }
+
+    @include sm {
+        color: silver;
+    }
+
+    @include md {
         color: silver;
     }
 }
@@ -79,12 +109,17 @@ body {
     }
 
     @include sm {
-        
+        width: 95%;
+        height: 95%;
+        margin-right: 0;
+        padding-left: 1rem;
+        border-radius: 4px;
     }
 
     @include md {
-        
-        
+        border-radius: 4px;
+        width: 25rem;
+        height: 15rem;
     }
 
     @include lg {
@@ -103,6 +138,19 @@ body {
 
     @include xs {
         width: 100%;
+        margin: 0;
+        border-radius: 4px;
+    }
+
+    @include sm {
+        width: 100%;
+        margin: 0;
+        border-radius: 4px;
+    }
+
+    @include md {
+        width: 100%;
+        height: 100%;
         margin: 0;
         border-radius: 4px;
     }
@@ -127,6 +175,16 @@ body {
         border-radius: 4px;
         width: 100%;
     }
+
+    @include sm {
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    @include md {
+        border-radius: 4px;
+        width: 100%;
+    }
 }
 
 
@@ -135,6 +193,24 @@ body {
     @include xs {
         border-radius: 4px ;
         width: 100%;
+    }
+
+    @include sm {
+        border-radius: 4px ;
+        width: 100%;
+    }
+
+    @include md {
+        border-radius: 4px ;
+        width: 100%;
+    }
+}
+
+
+
+.video__thumbnail--container {
+    @include md {
+        border-top: 1px solid #E1E1E1;
     }
 }
 
@@ -148,5 +224,96 @@ body {
     @include xs {
         text-align: center;
         color: map-get($colors , BrainFlix_Blue);
+    }
+
+    @include sm {
+        text-align: center;
+        color: map-get($colors , BrainFlix_Blue);
+    }
+
+    @include md {
+        text-align: center;
+        color: map-get($colors , BrainFlix_Blue);
+        height: 40px;
+        min-width: 150px;
+        border-radius: 4px;
+        border: none;
+        font-weight: 700;
+        order: 1;
+    }
+
+    @include lg {
+        text-align: center;
+        color: map-get($colors , BrainFlix_Blue);
+    }
+}
+
+
+
+.buttons_container {
+    @include md {
+        width: 100%;
+    }
+}
+
+.upload__button--container {
+    @include md {
+        display: flex;
+        order: 3;
+        float: right;
+        justify-content: center;
+        height: 40px;
+        min-width: 150px;
+        border-radius: 4px;
+    }
+    
+}
+
+.buttons_container {
+    @include md {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+.publish__button {
+    background-color: map-get($colors, BrainFlix_Blue ); 
+    height: 40px;
+    min-width: 150px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-weight: 700;
+
+    &:hover {
+        background-color: map-get($colors , BrainFlix_DarkBlue );
+        cursor: pointer;
+    }
+
+    @include xs {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    @include sm {
+        width: 100%;
+    }
+
+    @include md {
+        width: 100%;
+    }
+}
+
+.button__items--container {
+    @include md {
+        display: flex;
+        order: 2;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 150px;
     }
 }

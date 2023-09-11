@@ -1,8 +1,8 @@
 import React from "react";
 import videoThumbnail from "../../../assets/Images/Upload-video-preview.jpg";
-import UploadButton from '../Upload Video/PublishButton';
+import PublishButton from '../Upload Video/PublishButton';
 import './UploadVideo.css';
-import {ReactComponent as UploadIcon}from '../../../assets/Icons/upload.svg';
+import {ReactComponent as PublishIcon}from '../../../assets/Icons/publish.svg';
 
 function VideoUpload () {
     //const className = props.className;
@@ -28,11 +28,13 @@ function VideoUpload () {
                     <textarea id="videoTitle" className="video__title" placeholder="Add a title to your video" required></textarea>
                     <h3>ADD A VIDEO DESCRIPTION</h3>
                     <textarea id="videoDescriptiob" className="video__description" rows="10" placeholder="Add a description to your video" required></textarea>
-                    <div className="upload__button--container">
-                        <div className="upload__icon--container"><UploadIcon/></div>
-                        <UploadButton className= "header__button" label='PUBLISH' />
-                    </div>
-                    <div className="cancel__container"><h2>CANCEL</h2></div>
+                    <div className="buttons_container">  
+                        <div className="button__items--container">
+                            <div className="upload__icon--container"><PublishIcon/></div>
+                            <PublishButton className= "publish__button" label='PUBLISH' />
+                        </div>
+                        <div className="cancel__container"><h2>CANCEL</h2></div>
+                    </div>  
                 </form>
             </div>
         </div>
