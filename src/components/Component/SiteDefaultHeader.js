@@ -5,7 +5,7 @@ import UploadButton from './Button';
 import SiteLogo from './Logo';
 import SearchBar from './DefaultSearchBar';
 import UserImage from './UserImage';
-
+import '../../styles/header.css';
 
 
 

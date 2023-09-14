@@ -16,12 +16,12 @@
   font-weight: normal;
   font-style: normal;
 }
-@media screen and (min-width: 0) and (max-width: 767px) {
+@media screen and (min-width: 0) and (max-width: 480px) {
   .main__video {
     width: 100%;
   }
 }
-@media (min-width: 767px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .main__video {
     width: 100%;
   }
@@ -36,12 +36,12 @@
     width: 100%;
   }
 }
-@media screen and (min-width: 0) and (max-width: 767px) {
+@media screen and (min-width: 0) and (max-width: 480px) {
   .video__details {
     padding: 1rem;
   }
 }
-@media (min-width: 767px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .video__details {
     padding: 1rem;
   }
@@ -67,12 +67,12 @@
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 767px) {
+@media screen and (min-width: 0) and (max-width: 480px) {
   .video__container {
     width: 100%;
   }
 }
-@media (min-width: 767px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .video__container {
     width: 100%;
   }
@@ -90,7 +90,7 @@
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 767px) {
+@media screen and (min-width: 0) and (max-width: 480px) {
   .video__poster {
     position: relative;
     top: 0;
@@ -98,7 +98,7 @@
     width: 100%;
   }
 }
-@media (min-width: 767px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .video__poster {
     position: relative;
     top: 0;

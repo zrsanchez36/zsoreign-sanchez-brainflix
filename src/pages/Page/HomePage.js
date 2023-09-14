@@ -117,9 +117,9 @@ function HomePage() {
                     <div className='main__video--title'>
                       <h1>{mainVideo.title}</h1>
                     </div>
-                    <div className='video--info'>
-                      <div className='video__stat--container'><img src= {ViewsIcon} className='views__icon' /><p>{mainVideo.views}</p></div>
-                      <div className='video__stat--container'><img src= {LikesIcon} className='likes__icon' /><p>{mainVideo.likes} </p></div>
+                    <div className='video__info'>
+                      <div className='video__stat--container'><img src= {ViewsIcon} className='views__icon' alt='views'/><p>{mainVideo.views}</p></div>
+                      <div className='video__stat--container'><img src= {LikesIcon} className='likes__icon' alt='likes'/><p>{mainVideo.likes} </p></div>
                       <div className="channel__info">
                         <h4>By {mainVideo.channel}</h4>
                         <p>{mainVideo.timestamp}</p>
@@ -134,21 +134,22 @@ function HomePage() {
             {/*comment section  */}   
                   
                   <div className="comments__section">
-                    <h3>{mainVideo.comments.length} Comments</h3>
+                    <h3 className='comment__amount'>{mainVideo.comments.length} Comments</h3>
                     <div className="add__comment">
                        <div className="comment__avatar--container">
-                          <img src= {UserIcon1} className='comment__avatar'></img>
+                          <img src= {UserIcon1} className='comment__avatar' alt='user'></img>
                         </div>
                     <div className="form__container">
                       <form>
                       <h3>JOIN THE CONVERSATION</h3>
                         <textarea id="commentBox" className="comment__textbox" rows="10" placeholder="Add a new comment" required></textarea>
+                        <div className='submit__button--container'>
                           <input id="submit__button" type="submit" value="COMMENT" className="comment__button"></input>
+                        </div>
                      </form>
                     </div>
                     </div>
                     <div className='comment__area'>
-                    <h2>Comments</h2>
             {comments.map(comment => (
                 <div key={comment.id} className='comment'>
                   
@@ -175,7 +176,7 @@ function HomePage() {
             <h4 className='next__video'>Next Videos</h4>
               {sideVideos.map(video => (
                 <div className='side__video'>
-                  <Link key={video.id} to={`/video-details/${video.id}` } className='side__video--img'>
+                  <Link key={video.id} to={`/video-details/${video.id}` } className='side__videolink--container'>
                     <div className='side__video--container'>
                           <img src={video.image} alt={video.title} className='side__video--img' />
                     </div>

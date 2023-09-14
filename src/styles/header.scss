@@ -3,7 +3,7 @@
 @use './mixins/font-face' as *;
 // @include fontFace('avenir_next_lt_probold', 'src/assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff');
 
-@use '../../../styles/mixins/breakpoints' as *;
+@use './mixins/breakpoints' as *;
 
 @font-face {
     font-family: 'avenir_next_lt_probold';
@@ -476,5 +476,19 @@ body {
 
     @include xl {
         position: absolute;
+    }
+}
+
+
+.header__nav--link {
+    @include xs {
+        order: 4;
+    }
+    @include sm {
+        order: 4;
+    }
+
+    @include md {
+        order: 4;
     }
 }

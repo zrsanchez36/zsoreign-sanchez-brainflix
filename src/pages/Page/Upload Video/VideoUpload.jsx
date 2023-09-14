@@ -19,7 +19,7 @@ function VideoUpload () {
                     <h1>Upload Video</h1>
                 </div>
             <div className="upload__form--section">
-                <hr className="top__divider"></hr>
+                {/* <hr className="top__divider"></hr> */}
                 <div className="video__thumbnail--container" >
                     <h3 className="video__thumbnail--title">Video Thumbnail</h3>
                     <div className="upload__thumbnail--container">
