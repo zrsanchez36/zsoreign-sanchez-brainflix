@@ -99,7 +99,7 @@ function HomePage() {
 
 
     return (
-      <div>
+      <div className='homepage'>
           {/* <header>
               <Link to="/">
                   <img src="path-to-brainflix-logo.png" alt="BrainFlix Logo" />
@@ -118,8 +118,10 @@ function HomePage() {
                       <h1>{mainVideo.title}</h1>
                     </div>
                     <div className='video__info'>
-                      <div className='video__stat--container'><img src= {ViewsIcon} className='views__icon' alt='views'/><p>{mainVideo.views}</p></div>
-                      <div className='video__stat--container'><img src= {LikesIcon} className='likes__icon' alt='likes'/><p>{mainVideo.likes} </p></div>
+                      <div className='video__stats'>
+                        <div className='video__stat--container'><img src= {ViewsIcon} className='views__icon' alt='views'/><p>{mainVideo.views}</p></div>
+                        <div className='video__stat--container'><img src= {LikesIcon} className='likes__icon' alt='likes'/><p>{mainVideo.likes} </p></div>
+                      </div>
                       <div className="channel__info">
                         <h4>By {mainVideo.channel}</h4>
                         <p>{mainVideo.timestamp}</p>
