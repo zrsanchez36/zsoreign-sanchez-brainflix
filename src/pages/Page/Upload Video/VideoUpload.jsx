@@ -8,7 +8,7 @@ function VideoUpload () {
     //const className = props.className;
     //const alt = props.alt
  
-    // Handle form submission (you can add this functionality)
+
     const handleSubmit = (e) => {
     e.preventDefault();
     // Handle video upload form submission here
