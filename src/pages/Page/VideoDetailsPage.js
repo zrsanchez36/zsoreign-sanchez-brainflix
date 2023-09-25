@@ -42,7 +42,7 @@ function VideoDetailsPage() {
                     <h3>{videoDetails.comments.length} Comments</h3>
                     <div className="add__comment">
                        <div className="comment__avatar--container">
-                          <img src= {UserIcon1} className='comment__avatar'></img>
+                          <img src= {UserIcon1} className='comment__avatar' alt='user'></img>
                         </div>
                     <div className="form__container">
                       <form>
