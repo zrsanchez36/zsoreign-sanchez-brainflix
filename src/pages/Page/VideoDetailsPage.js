@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import UserIcon1 from '../../assets/Images/Mohan-muruge.jpg';
+import ViewsIcon from '../../assets/Icons/views.svg';
+import LikesIcon from '../../assets/Icons/likes.svg';
+
+
+
+
 
 function VideoDetailsPage() {
     const { videoId } = useParams();
@@ -27,15 +33,29 @@ function VideoDetailsPage() {
     
     return (
         <div>
-            <video poster={videoDetails.image} controls src={videoDetails.video + "?api_key=ddb4cfdc-7137-4dbb-8b90-f00aea8d2d3f"}></video>
-            <div className='main__video--title'>
-            <h1>{videoDetails.title}</h1>
+            <section className='main__Video'>
+            <div className='video__container'>
+                <video poster={videoDetails.image} className='video__poster' controls src={videoDetails.video + "?api_key=ddb4cfdc-7137-4dbb-8b90-f00aea8d2d3f"}></video>
             </div>
-            <p>Likes: {videoDetails.channel}</p>
-            <p>Views: {videoDetails.timestamp}</p>
-            <p>Author: {videoDetails.views}</p>
-            <p>{videoDetails.likes}</p>
+            <div className='video__details'>
+                <div className='main__video--title'>
+                <h1>{videoDetails.title}</h1>
+                </div>
 
+                <div className='video__info'>
+                    <div className="channel__info">
+                        <p>By {videoDetails.channel}</p>
+                        <p> {videoDetails.timestamp}</p>
+                    </div>
+                    <div className='video__stats'>
+                        <div className='video__stat--container'><img src= {ViewsIcon} className='views__icon' alt='views'/><p> {videoDetails.views}</p></div>
+                        <div className='video__stat--container'><img src= {LikesIcon} className='likes__icon' alt='likes'/><p>{videoDetails.likes}</p></div>
+                    </div>
+                </div>
+            </div>
+           
+           
+           
             {/*comment section  */}   
                   
             <div className="comments__section">
@@ -56,13 +76,16 @@ function VideoDetailsPage() {
 
 
 
-            <h2>Comments</h2>
+            
             {comments.map(comment => (
-                <div key={comment.id}>
-                    <h3>{comment.name}</h3>
-                    <p>{comment.comment}</p>
+                <div key={comment.id} className='comment'>
+                     <div className="comment__avatar--blank"> </div>
+                    <h4 className='user__name'>{comment.name}</h4>
+                    <p className='time__stamp'>{comment.timestamp}</p>
+                    <p className='comment__text'>{comment.comment}</p>
                 </div>
             ))}
+            </section>
         </div>
     );
 }
