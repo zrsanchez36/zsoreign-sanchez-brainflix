@@ -49,13 +49,15 @@ body {
 @media (min-width: 1279px) and (max-width: 1480px) {
   .upload__section--title {
     border-top: 1px solid #E1E1E1;
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 @media (min-width: 1480px) {
   .upload__section--title {
     border-top: 1px solid #E1E1E1;
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
@@ -64,6 +66,23 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 2rem;
+  }
+}
+
+@media (min-width: 1279px) and (max-width: 1480px) {
+  .upload__section--container {
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+  }
+}
+@media (min-width: 1480px) {
+  .upload__section--container {
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
   }
 }
 
@@ -87,14 +106,15 @@ body {
 }
 @media (min-width: 1279px) and (max-width: 1480px) {
   .upload__form--section {
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     display: flex;
-    border-bottom: 1px solid #E1E1E1;
   }
 }
 @media (min-width: 1480px) {
   .upload__form--section {
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 

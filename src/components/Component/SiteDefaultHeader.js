@@ -50,9 +50,11 @@ function Header({setMainVideo, setVideos}) {
   return (
     <header className="site__header">
       <nav className='site__navigation'>
-        <Link to="/" className="header__logo--link" onClick={handleHomeLinkClick}>
-          <SiteLogo className = 'header__logo' alt='Brainflix Logo' />
-        </Link>
+        <div className='header__logolink--container'>
+          <Link to="/" id='headerLogoLink' onClick={handleHomeLinkClick}>
+            <SiteLogo className = 'header__logo' alt='Brainflix Logo' />
+          </Link>
+        </div>
         <SearchBar className = 'header__search' type = 'text' placeholder = 'Search' />
         <UserImage className = 'header__userimage' alt = 'user' />
       <Link to="/upload"  className="header__nav--link">

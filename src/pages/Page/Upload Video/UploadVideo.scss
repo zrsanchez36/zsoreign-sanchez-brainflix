@@ -64,12 +64,14 @@ body {
 
     @include lg {
         border-top: 1px solid #E1E1E1;
-        padding: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     @include xl {
         border-top: 1px solid #E1E1E1;
-        padding: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }
 
@@ -78,6 +80,22 @@ body {
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 2rem;
+    }
+}
+
+.upload__section--container {
+    @include lg {
+        width: 100%;
+        display: flex;
+        border-top: 1px solid #E1E1E1;
+        border-bottom: 1px solid #E1E1E1;
+    }
+
+    @include xl {
+        width: 100%;
+        display: flex;
+        border-top: 1px solid #E1E1E1;
+        border-bottom: 1px solid #E1E1E1;
     }
 }
 
@@ -101,13 +119,14 @@ body {
     }
 
     @include lg {
-        padding: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
         display: flex;
-        border-bottom: 1px solid #E1E1E1;
     }
 
     @include xl {
-        padding: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
 }

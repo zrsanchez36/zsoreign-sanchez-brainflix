@@ -19,9 +19,10 @@ function VideoUpload () {
         const videoData = {
             title: title,
             description: description,
-            image: 'http://localhost:3000/images/default-image.jpg', // Hardcoded Image Path
+            image: 'http://localhost:3000/images/default-image.jepg', // Hardcoded Image Path
             views: 0, 
             likes: 0, 
+            duration: 4.01,
         };
         console.log('Video Data: ', videoData);
 
@@ -42,30 +43,32 @@ function VideoUpload () {
                 </div>
             <div className="upload__form--section">
                 {/* <hr className="top__divider"></hr> */}
-                <div className="video__thumbnail--container" >
-                    <h3 className="video__thumbnail--title">Video Thumbnail</h3>
-                    <div className="upload__thumbnail--container">
-                        <img src={videoThumbnail} className='upload__thumbnail' alt="thumbnail"></img>
-                    </div>
-                </div>
-                <form className="upload__form" onSubmit={handleSubmit}>
-                    <div className="upload__form--container">
-                        <div className="form__section">
-                            <h3>TITLE YOUR VIDEO</h3>
-                            <input type="text" id="videoTitle" className="video__title" placeholder="Add a title to your video"  value={title} onChange= {(e) => setTitle(e.target.value)} required></input>
-                            <h3>ADD A VIDEO DESCRIPTION</h3>
-                            <textarea id="videoDescription" className="video__description" rows="10" placeholder="Add a description to your video" value={description} onChange={(e) => setDescription(e.target.value)} required></textarea>
+                <div className="upload__section--container">
+                    <div className="video__thumbnail--container" >
+                        <h3 className="video__thumbnail--title">Video Thumbnail</h3>
+                        <div className="upload__thumbnail--container">
+                            <img src={videoThumbnail} className='upload__thumbnail' alt="thumbnail"></img>
                         </div>
                     </div>
-            
-                    <div className="buttons_container">  
-                            <div className="button__items--container">
-                                <div className="upload__icon--container"><PublishIcon/></div>
-                                <PublishButton className= "publish__button" label='PUBLISH' type="submit" />
+                    <form className="upload__form" onSubmit={handleSubmit}>
+                        <div className="upload__form--container">
+                            <div className="form__section">
+                                <h3>TITLE YOUR VIDEO</h3>
+                                <input type="text" id="videoTitle" className="video__title" placeholder="Add a title to your video"  value={title} onChange= {(e) => setTitle(e.target.value)} required></input>
+                                <h3>ADD A VIDEO DESCRIPTION</h3>
+                                <textarea id="videoDescription" className="video__description" rows="10" placeholder="Add a description to your video" value={description} onChange={(e) => setDescription(e.target.value)} required></textarea>
                             </div>
-                            <div className="cancel__container"><h2>CANCEL</h2></div>
                         </div>
-                </form>
+                
+                        <div className="buttons_container">  
+                                <div className="button__items--container">
+                                    <div className="upload__icon--container"><PublishIcon/></div>
+                                    <PublishButton className= "publish__button" label='PUBLISH' type="submit" />
+                                </div>
+                                <div className="cancel__container"><h2>CANCEL</h2></div>
+                            </div>
+                    </form>
+                </div>
             </div>  
         </section>
     );
