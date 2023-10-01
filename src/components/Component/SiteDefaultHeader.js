@@ -18,7 +18,6 @@ function Header({setMainVideo, setVideos}) {
 
   // Function to reset the HomePage component state
   const resetHomePageState = () => {
-    // You should replace 'API_URL_HERE' with the actual API URL used to fetch data initially
     axios.get('https://project-2-api.herokuapp.com/videos?api_key=ddb4cfdc-7137-4dbb-8b90-f00aea8d2d3f/videos/:id')
       .then((response) => {
         const videoData = response.data.videos;
