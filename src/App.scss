@@ -45,6 +45,20 @@ body {
     border: none;
 }
 
+h1 {
+    @include xs {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+
+    @include sm {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+}
+
 
 .site__header {
     @include xs {
@@ -680,6 +694,8 @@ body {
     }
 
     @include sm {
+        border-top: 1px solid map-get($colors , Brain_Flix_Mercury );
+        border-bottom: 1px solid map-get($colors , Brain_Flix_Mercury );
         stroke-width: 1px;
         flex-wrap: wrap;
         flex-direction: row;
@@ -830,7 +846,7 @@ body {
         flex-direction: column;
         order: 1;
         width: 50%;
-        padding-top: .5rem;
+        padding-top: 2rem;
     }
 
     @include md {
@@ -867,7 +883,7 @@ body {
 
     @include sm {
         margin: 0;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         height: max-content;
     }
 
@@ -923,7 +939,7 @@ body {
 
     @include md {
         display: flex;
-        flex-wrap: wrap;
+        //flex-wrap: wrap;
         flex-direction: row;
         order: 2;
         float: right;
@@ -1024,7 +1040,8 @@ body {
     }
 
     @include md {
-        padding-top:1rem;
+        padding-top:1.25rem;
+        text-align: center;
     }
 }
 
