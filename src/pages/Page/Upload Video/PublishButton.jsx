@@ -8,7 +8,7 @@ function PublishButton(props) {
         return(
             <div className="upload__button--container">
                 <button className={className} type={type}>{label}</button>
-                <div className="upload__icon--container"><UploadIcon /></div>
+                {/* <div className="upload__icon--container"><UploadIcon /></div> */}
             </div>
         );
 }
