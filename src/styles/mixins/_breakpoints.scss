@@ -4,6 +4,11 @@ $breakpoints: (
     "md": 768px,
     "lg": 1279px,
     "xl": 1480px,
+    
+////////////
+    "xsH": 0,
+    "xlH": 1480px,
+    
 );
 
 @mixin xs {
@@ -41,4 +46,10 @@ $breakpoints: (
         @content;
     }
 
+}
+
+@mixin gh {
+    @media (min-height: map-get($breakpoints, "xsH")) and (max-height: map-get($breakpoints, "xlH")){
+        @content;
+    }
 }

@@ -1993,11 +1993,13 @@ h1 {
     }
 
     @include lg {
-        width:30%;
+        width:348px;
         position: absolute;
-        top:90%;
         float: right;
         left: 65%;
+        height: 928px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     @include xl {
@@ -2006,6 +2008,13 @@ h1 {
         top:85%;
         float: right;
         left: 65%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include gh {
+        top: 928px;
+        bottom: 90%;
     }
 }
 
@@ -2059,4 +2068,31 @@ h1 {
     }
 
 
+}
+
+
+.comment__form {
+    @include lg {
+        width: 100%;
+    }
+    @include xl {
+        width: 100%;
+    }
+}
+
+
+.inner__form--content {
+    @include lg {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+       
+    }
+
+    @include xl {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+       
+    }
 }

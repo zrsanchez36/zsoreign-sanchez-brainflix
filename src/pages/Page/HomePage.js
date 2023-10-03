@@ -83,11 +83,13 @@ function HomePage() {
                           <img src= {UserIcon1} className='comment__avatar' alt='user'></img>
                         </div>
                     <div className="form__container">
-                      <form>
+                      <form className='comment__form' id='commentForm'>
                       <h3>JOIN THE CONVERSATION</h3>
-                        <textarea id="commentBox" className="comment__textbox" rows="10" placeholder="Add a new comment" required></textarea>
-                        <div className='submit__button--container'>
-                          <input id="submit__button" type="submit" value="COMMENT" className="comment__button"></input>
+                        <div className='inner__form--content'>
+                          <textarea id="commentBox" className="comment__textbox" rows="10" placeholder="Add a new comment" required></textarea>
+                          <div className='submit__button--container'>
+                            <input id="submit__button" type="submit" value="COMMENT" className="comment__button"></input>
+                          </div>
                         </div>
                      </form>
                     </div>
